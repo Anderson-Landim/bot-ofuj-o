@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se inscreva no Canal</title>
+
+    <style>
+        body {
+            background-color: #0f0f0f;
+            background-image: url("https://scontent.fplu8-1.fna.fbcdn.net/v/t39.30808-6/481663520_2801307556706693_1955088641027069852_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHwVss0bD8qGds-GGE2dMI7PQcjlYh1EM49ByOViHUQzj322PyrBrdUptk79Dyzfucqsd26J3-yI5lEGXOT4Kpi&_nc_ohc=7YX9q4d1zJsQ7kNvgHAAdjX&_nc_oc=AdhD-bmOme6Ci1CEdtQBi6xA1MNh3leq2KFbjFJTT9xmDbqTqkq3Sse9ags94HnLOo4&_nc_zt=23&_nc_ht=scontent.fplu8-1.fna&_nc_gid=AGjzLE6YIY-tniJKoz7ldaW&oh=00_AYB9fO-PMreJJgPxV5ydfJsR2iww_mi5RhSNV4Fcn8bGqg&oe=67C56375");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left top;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 0;
+            
+        }
+        
+
+
+        .painel{
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+            margin-top: 350px;
+            width: 700px;
+            height: 150px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        #sim{
+            position: absolute;
+            background-color: rgb(58, 247, 58);
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid rgb(0, 0, 0);
+            cursor: pointer;
+            height: 50px;
+            width: 100px;
+            margin-left: -160px;
+
+        }
+        #nao{
+            position: absolute;
+            background-color: rgb(223, 99, 99);
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid rgb(0, 0, 0);
+            cursor: pointer;
+            height: 50px;
+            width: 100px;
+            margin-left: 90px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class='painel'>
+        <h1>Voce gostaria de inscrever no Canal ?</h1>
+
+
+        <a href="https://www.youtube.com/@AndersonLandimDEV"> <button onmouseover="this.style.color='green'" id="sim">Sim! &#128525</button>
+        
+        <button onmouseover="fuja()" id="nao">Não! &#128545</button>
+
+    </div>
+
+    <script>
+        function fuja(){
+            var botaonao = document.getElementById("nao");
+            var largura = window.innerWidth;
+            var altura = window.innerHeight;
+
+            var x = largura - botaonao.offsetWidth;
+            var y = altura - botaonao.offsetHeight;
+            
+            var aleatorioX = Math.floor(Math.random() * x);
+            var aleatorioY = Math.floor(Math.random() * y);
+
+            botaonao.style.left = aleatorioX + "px";
+            botaonao.style.top = aleatorioY + "px";
+
+        }
+    </script>
+
+</body>
+</html>
